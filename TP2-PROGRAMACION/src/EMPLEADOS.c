@@ -88,7 +88,7 @@ int empleado_getEmptyIndex(Employee* array,int limite)
 					respuesta = i;
 				}
 				if(i>0){
-					respuesta = i-7;
+					respuesta = i;
 				}
 				break;
 			}
@@ -99,7 +99,7 @@ int empleado_getEmptyIndex(Employee* array,int limite)
 
 /** Busca un ID en un array y devuelve la posicion en que se encuentra
 * array cliente Array de Employee
-* limite int es el tamaño del array
+* limite int es el tamaÃ±o del array
 * posicion int* Puntero a la posicion del array donde se encuentra el valor buscado
 * \return int Return (-1) si no encuentra el valor buscado - (0) si encuentra el valor buscado
 *
@@ -337,6 +337,7 @@ void empleado_Cargar(Employee array[],int limite){
 								}
 							}
 						}
+                                                opcionPuntoCuatro=-1;
 					}
 					else
 					{
@@ -368,7 +369,7 @@ int empleado_OrdenarPorAPELLIDOySECTOR(Employee array[],int limite)
 			flagSwap = 0;
 			for(i=0;i<limite-1;i++)
 			{											// strncmp -> se usa para comprar un texto con otro texto
-				{										// DONDE ESTA 20 CAMBIARLO POR EL TAMAÑO COLOCALADO
+				{										// DONDE ESTA 20 CAMBIARLO POR EL TAMAÃ‘O COLOCALADO
 				if(strncmp(array[i].apellido,array[i+1].apellido,TAMANO_APELLIDO) > 0 ||
 				   (strncmp(array[i].apellido,array[i+1].apellido,TAMANO_APELLIDO) == 0 &&
 				    array[i].sector < array[i+1].sector))
