@@ -83,13 +83,7 @@ int empleado_getEmptyIndex(Employee* array,int limite)
 		{
 			if(array[i].isEmty == 1)
 			{
-				if(i==0)
-				{
-					respuesta = i;
-				}
-				if(i>0){
-					respuesta = i;
-				}
+			        respuesta = i;
 				break;
 			}
 		}
@@ -152,7 +146,7 @@ int empleado_CargarDATOS(Employee array[],int limite, int indice){
 int empleado_Modificar(Employee array[],int limite, int indice){
 
 	int retorno = -1;
-	int opcionMenu;
+	int opcionMenu = 0;
 
 	if(array != NULL && limite > 0 && indice >= 0 && array[indice].isEmty == 0)
 	{
